@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	function sum(){
+		
+		result.value = parseInt(f1.value)+parseInt(s2.value);
+		document.getElementById("out").innerHTML=parseInt(f1.value)+parseInt(s2.value);
+	}
+	function sub(){
+		result.value = parseInt(f1.value)-parseInt(s2.value);
+		document.getElementById("out").innerHTML=parseInt(f1.value)-parseInt(s2.value);
+	}
+	function mul(){
+		result.value = parseInt(f1.value)*parseInt(s2.value);
+		document.getElementById("out").innerHTML=parseInt(f1.value)*parseInt(s2.value);
+	}
+	function div(){
+		result.value = parseInt(f1.value)/parseInt(s2.value);
+		document.getElementById("out").innerHTML=parseInt(f1.value)/parseInt(s2.value);
+	}
+	
+</script>
+</head>
+<body>
+	<table align="center">
+		<tr>
+			<td><img alt="加载失败" src="../Img/buy.jpg"></td>
+			<td colspan="3">购物简易计算器</td>
+		</tr>
+		<tr>
+			<td>第一个数</td>
+			<td colspan="3"><input type="text" id="f1"/></td>
+		</tr>
+		<tr>
+			<td>第二个数</td>
+			<td colspan ="3"><input type="text" id="s2"></td>
+		</tr>
+		<tr>
+			<td><input type="button" value="+" onClick="sum()"/></td>
+			<td><input type="button" value="-" onClick="sub()"/></td>
+			<td><input type="button" value="*" onClick="mul()"/></td>
+			<td><input type="button" value="/" onClick="div()"/></td>
+		</tr>
+		<tr>
+			<td>计算结果为</td>
+			<td colspan="3"><input type="text" id="result" value="0"></td>
+			
+		</tr>
+		<tr>
+			<td></td>
+			<td colspan="3"><p id="out"></p></td>
+		</tr>
+	</table>
+</body>
+</html>
