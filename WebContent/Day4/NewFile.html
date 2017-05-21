@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<script scr='../js/NewFile.jsp'></script>
+	<script type="text/javascript">
+		//js 不区分单引号双引号//
+		var str ='Hello';
+		console.log(str);
+		var str2="heloo"
+		console.log(str2);
+		var str3 ="i"+"love'you";
+		console.log(str3);
+		var num;
+		console.log(num);//undefined 未赋值
+		var num1;
+		num1=null;  //清空
+		console.log(num1);
+		
+		//typeof() 获取变量类型
+		var zz;
+		console.log(zz);
+		zz='hello';
+		console.log(typeof(zz));
+		//===
+		var m ='3';
+		var n=3;
+		if(m==n){
+			console.log('m==n');
+		}
+		if(m===n){
+			console.log('m===n');
+		}
+		var t=3;
+		if(m==t){
+			console.log('m===t');
+		}
+		// ss的值未。。。。。时未FALSE
+		var ss=0;
+		if(ss){
+			console.log('ture');
+		}
+		if(!ss){
+			console.log('false');
+		}
+		//x.toLowerCase
+		//x.toUpperCase'
+		//获取指定字符串 x.CharAt(index) index 字符串位置
+		//x.indexOF(findstr.[index]);
+		//x.iastIndexOf(findstr.[index]);
+		//split() 用于把一个字符串分割成字符数组
+		
+		var dd='hello';
+		console.log(dd.toLowerCase());
+		console.log(dd.toUpperCase());
+		console.log(dd.charAt(3));
+		console.log(dd.indexOf('o'));
+		console.log(dd.lastIndexOf('o'));
+		var aa='hello world my friend ';
+		var ar= aa.split(' ');
+		console.log(ar);
+		console.log(ar[3]);
+		console.log('w t f'.split(' ',2));
+		var cc=3;
+		if(cc>12){
+			cc=Number.NaN;
+		}
+		document.write(cc);		
+	</script>
+	
+</head>
+
+<body>
+	<!-- 直接写在理念 -->
+	<input type="button" value="js" onclick="alert(hehs);"/>
+	<!--  -->
+	<input type="button" value="sj" onclick=d()/>
+	<!--  -->
+	<input type="button" value='sfd' onclick=s()/>
+</body>
+</html>

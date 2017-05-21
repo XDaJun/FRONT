@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		
+		<script type="text/javascript" src="../js/jquery-1.11.1.js" ></script>
+		<style type="text/css">
+			.div1,.div2,.div3{
+				width: 200px;
+				height: 200px;
+				margin: 20px 20px 0px 0px;
+			}
+			#ff{
+				border: 1px dashed red;
+				
+			}
+			.div1{
+				background-color: green;
+				float: right;
+			}
+			.div2{
+				background-color: red;
+				float: right;
+			}
+			.div3{
+				background-color: blue;
+				float: right;
+			}
+			.div4{
+				clear: both;
+			}
+			
+			p{
+				clear: right;
+			}
+		</style>
+		<script>
+			$(function(){
+				setInterval('gaga()',30);
+				
+			});
+			function gaga(){
+				$(".div2").backgroundColor("red");
+				$(".div2").fadeToggle(40);
+				
+			}
+		</script>
+	</head>
+	<body>
+		
+			
+		
+		<div id="ff">
+			<div class="div1"></div>
+			<div class="div2"></div>
+			<div class="div3"></div>
+			<div class='div4'></div>
+		</div>
+		<p>
+		╭︿︿︿╮ <br />
+		{/ o  o /}<br />  
+		 ( (oo) )  <br /> 
+		</p>
+	</body>
+</html>

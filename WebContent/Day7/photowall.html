@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+			
+		<title>照片墙</title>
+		<style type="text/css">\
+			*{
+				padding: 0px;
+				margin: 0px;
+			}
+			li{
+				border: 1px solid red ;
+				margin: 10px;
+				padding: 10px;
+				float: left;
+				background-color: #FFFF00;
+				position: relative;
+			}
+			ul{
+				margin: 0 auto;
+				list-style-type: none;
+				padding: 0px;
+				width: 726px;
+				border: 1px solid #858585;
+				
+			}
+			img{
+				width: 200px;
+				height: 200px;
+			}
+			.zz{
+				clear: both;
+			}
+			body{
+				background-color: #C0C0C0;
+			}
+			img:hover{
+				
+				left:2px;
+				top: -2px;
+			}
+			p{	
+				text-align: center;
+				position: absolute;
+				bottom: 33px;				
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-1.11.1.js" ></script>
+		<script type="text/javascript">
+			/*$(function(){
+				setInterval("ff()",40);	
+			});	
+			function ff(){
+				$("li").fadeToggle(10);
+			};*/
+			/*var imgs = document.getElementsByTagName("img");
+				for (var i = 0; i < imgs.length; i++) {
+					imgs[i].onclick = function() {
+						var src = this.src;
+						document.body.style.background = "url(" + src + ")";*/
+			$(function(){
+				var rr=	$('img');
+				for(var i=0;i<6;i++){
+					rr[i].onmouseenter = function(){
+						var tt=this.src;
+						/*document.body.style.background = "url(" + tt+ ")";*/
+						$('body').css("background-image","url(" + tt+ ")");
+					}
+				}
+			});
+		</script>
+	</head>
+	<body>
+		<ul>
+			<li>
+				<img src="../Img/0.jpg"/>
+				<p>00</p>
+			</li>
+			<li>
+				<img src="../Img/1.jpg" />
+				<p>11</p>
+			</li>
+			<li>
+				<img src="../Img/2.jpg" />
+				<p>22</p>
+			</li>
+			<!--<div class="zz"></div>-->
+			<li>
+				<img src="../Img/3.jpg"/>
+				<p>33</p>
+			</li>
+			<li>
+				<img src="../Img/4.jpg"  />
+				<p>44</p>
+			</li>
+			<li>
+				<img src="../Img/ti7.jpg" alt="" />
+				<p>55</p>
+			</li>
+			<div class="zz"></div>
+			
+		</ul>
+	</body>
+</html>

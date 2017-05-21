@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+	<script type="text/javascript">
+	
+		window.onload = function(){
+			var car=["奔驰","宝马","奥迪"];
+			var ull=document.createElement('ul');
+			for(var k in car){
+				var lii=document.createElement('li');
+				var txt=document.createTextNode(car[k]);
+				lii.appendChild(txt);
+				ull.appendChild(lii);
+			}
+			document.body.appendChild(ull);
+			
+			
+			var over1= document.getElementsByTagName("li")[0];
+			var over2= document.getElementsByTagName("li")[1];
+			var over3= document.getElementsByTagName("li")[2];
+			over1.addEventListener("mouseenter",revo);
+			over2.addEventListener("mouseenter",revo);
+			over3.addEventListener("mouseenter",revo);
+			over1.addEventListener("mouseout",leave);
+			over2.addEventListener("mouseout",leave);
+			over3.addEventListener("mouseout",leave);
+			
+		}
+		function revo(){
+			this.style.backgroundColor="blue";
+		}
+		function leave(){
+			this.style.backgroundColor="white";
+		}
+		
+	
+	</script>
+</head>
+<body>
+</body>
+	
+
+</html>
+	

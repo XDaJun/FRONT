@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			*{
+				padding: 0;
+				margin: 0;
+			}
+			.zz{
+				width: 200px;
+				height: 100px;
+				background-color: blue;
+			}
+			.ww{
+				width: 200px;
+				height: 100px;
+				background-color: red;
+			}
+		</style>
+		<script type="text/javascript" src="../js/jquery-1.11.1.js"></script>
+		<script type="text/javascript">
+			$(function(){
+				gg();
+			});
+			function gg(){
+				$('.ww').css('background-color','red');		
+				setTimeout(10,"pp()");
+			}
+			function pp(){
+				$('.ww').css('background-color','blue');
+				setTimeout(10,"gg()");
+			}
+
+			/*$(function(){
+				setInterval("kky()",10);
+			});
+				var filp=0;
+			function kky(){
+				$('#ee').toggle(filp++%2==0);
+			console.log(filp);
+			}*/
+
+		</script>
+	</head>
+	<body>
+		<div id="gold" class="zz">		
+		<p id="ee" class="ww"></p>				
+		</div>
+	</body>
+</html>

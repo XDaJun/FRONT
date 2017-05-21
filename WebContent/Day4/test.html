@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	.red{
+		color:red;
+	}
+	.green{
+		color:blue;
+		}
+</style>
+<script type="text/javascript">
+	function leave(){
+		var str=document.getElementById("account").value;
+		var reg=/\w{5,10}/;
+		if(reg.test(str)){
+			change1.className="green";
+			return true;
+		}else{
+			change1.className="red";
+			return false;
+			}
+		}
+		
+		function leave2(){
+		var rts=document.getElementById("pwd").value;
+		var ger=/\w{10,20}/;
+		if(ger.test(rts)){
+			change2.className="green";
+			return true;
+		}else{
+			change2.className="red";
+			return false;
+		}
+		}
+		
+		function sun(){
+			var sum = parseInt(Math.random()*100+1);
+			var get=document.getElementById("son").value;
+			var zz=parseInt(get);
+			if(sum>zz){
+				out.innerHTML="小";
+				
+			}else if(sum<zz){
+				out.innerHTML="大";
+			}else{
+				out.innerHTML="答对了";
+			}
+		}
+</script>
+</head>
+<body>
+	<form onsubmit="return leave() + leave2() == 2;">
+		<table align="center">
+		</br>
+			<tr>
+				<td>
+					<p>账号：</p></td>
+				<td>
+					<input id="account" type="text" maxlength="10"onblur="leave()"/>
+				</td>
+				<td>
+					<p id="change1">请输入5-10位字母、数字、下划线</p>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<p>密码：</p>
+				</td>
+				<td>
+					<input id="pwd" type="passworld" maxlength="20"
+					onblur="leave2()"/>
+				</td>
+				<td>
+					<p id="change2">请输入10-20位字母、数字、下划线</p>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2" align="center">
+					<input type="submit" value="登录" onClick="sss" 
+					/>
+				</td>
+			</tr>
+			</br>
+			<input type="text" id = "son" maxlength="10"/>
+			<span> <input type="button" value="go" onClick="sun()"/></span>
+			<p id="out"></p>
+		</table>
+	
+</form>
+</body>
+</html>
